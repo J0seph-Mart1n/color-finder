@@ -5,7 +5,7 @@ import PIL
 import os
 
 app = Flask(__name__)
-app.config['UPLOAD_PATH'] = 'static/assets'
+app.config['UPLOAD_PATH'] = './static/assets'
 level = 1
 
 @app.route('/')
