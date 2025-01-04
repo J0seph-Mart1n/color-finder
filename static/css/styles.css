@@ -1,0 +1,144 @@
+#gradient-background {
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+body{
+    margin: 0px;
+    padding: 0px;
+    min-width: 510px;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: blueviolet;
+    min-height: 70px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding-top: 50px;
+    font-size: 20px;
+    font-family: "Nunito", serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.navbar .logo{
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding-top: 50px;
+}
+
+/* .navbar-right{
+    float: right;
+}
+
+.navbar-right a{
+    color: white;
+    text-decoration: none;
+    padding: 25px;
+    padding-right: 30px;
+    font-size: 20px;
+    font-family: "Nunito", serif;
+    font-weight: 500;
+} */
+
+.container{
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+table, tr, td, th{
+    margin: auto;
+    padding: 10px;
+    border: 1.5px solid black;
+    font-family: 'Nunito', sans-serif;
+    background-color: white;
+}
+
+table{
+    margin: auto;
+    padding: 10px;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+form{
+    margin: auto;
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+input[type="submit"]{
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+button{
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+}
+
+label{
+    font-size: 18px;
+}
+
+.level{
+    font-family: "Nunito", serif;
+    padding: 5px;
+}
+
+.heading{
+    font-size: 35px;
+    font-family: "Nunito", serif;
+}
+
+.sub-heading{
+    font-size: 25px;
+    font-family: "Nunito", serif;
+}

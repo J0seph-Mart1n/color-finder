@@ -1,0 +1,39 @@
+{% include "header.html" %}
+
+<div class="container">
+    <h1 class="heading">Find Colors in your Image</h1>
+    <p class="sub-heading">Attach your Image here</p>
+    <form action = "/" method = "post" enctype="multipart/form-data">   
+        <input type="file" name="file" style="font-family: 'Nunito', sans-serif;"/>
+        <label for="Level">Level</label>
+        <select name="Level" class="level">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <input type = "submit" value="Go", accept=".png, .jpg, .jpeg">   
+    </form>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Picture</th>
+            <th>Remove Image</th>
+            <th>Colors</th>
+            <th>Color Codes (RGB Codes)</th>
+            
+        </tr>
+        {% for i in range(0,length) %}
+            <tr>
+                <td rowspan="10">{{ i+1 }}</td>
+                <td rowspan="10"><img src="{{ url_for('upload', filename=files[i]) }}" style="width: 100px; height: 100px;"></td>
+                <form action="{{url_for('delete', image_no=i)}}", method="post">
+                    <td rowspan="10"><button type="submit" formaction="{{url_for('delete', image_no=i)}}">Remove</button></td>
+                </form>
+                {% for color in colors[i] %}
+                <td style="background-color: rgb({{color[0]}}, {{color[1]}}, {{color[2]}}); width:5px; height:5px"></td>
+                <td>rgb({{color[0]}},{{color[1]}},{{color[2]}})</td>
+            </tr>
+                {% endfor %}
+        {% endfor %}
+    </table>
+</div>
